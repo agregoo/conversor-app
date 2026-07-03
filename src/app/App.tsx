@@ -64,7 +64,6 @@ const convertCurrency = async () => {
   try {
     setLoading(true);
 
-    // 🔥 busca taxas da moeda base (from)
     const response = await axios.get(
       `https://v6.exchangerate-api.com/v6/${API_KEY}/latest/${from}`
     );
@@ -83,7 +82,6 @@ const convertCurrency = async () => {
       return;
     }
 
-    // 💱 cálculo final
     const converted = Number(amount) * rate;
 
     setResult(converted);
@@ -117,7 +115,7 @@ const convertCurrency = async () => {
             </Text>
           </View>
 
-          {/* Card Principal Glassmorphism */}
+          {/* Card Principal */}
           <View className="bg-white/10 border border-white/20 rounded-3xl p-6 backdrop-blur-md shadow-2xl">
             
             {/* Input de Valor */}
@@ -135,7 +133,7 @@ const convertCurrency = async () => {
               />
             </View>
 
-            {/* Seletores Grid Lado a Lado */}
+            {/* Seletores */}
             <View className="flex-row justify-between mb-6 gap-4">
               <View className="flex-1">
                 <Text className="text-xs text-gray-300 font-semibold mb-2 uppercase tracking-wide">
@@ -189,7 +187,7 @@ const convertCurrency = async () => {
             </View>
           )}
 
-          {/* Exibição de Erros Customizada */}
+          {/* Exibição de Erros */}
           {errorText && !loading && (
             <View className="mt-6 bg-red-500/10 border border-red-500/20 p-4 rounded-2xl items-center">
               <Text className="text-red-400 text-sm font-medium text-center">
@@ -212,7 +210,7 @@ const convertCurrency = async () => {
         </View>
       </TouchableWithoutFeedback>
 
-      {/* MODAL DROPDOWN */}
+      {/* MODAL */}
       <Modal visible={modalVisible} transparent animationType="slide">
         <Pressable
           className="flex-1 bg-black/60 justify-end"
