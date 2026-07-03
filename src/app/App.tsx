@@ -1,11 +1,14 @@
-import { Text, View } from "react-native";
-
-export default function App() {
-  return (
-    <View className="flex-1 items-center justify-center bg-blue-500">
-      <Text className="text-white font-bold text-xl">
-        Hello World!
-      </Text>
-    </View>
-  );
-}
+import React, { useState } from "react";
+import {
+  Text,
+  View,
+  TextInput,
+  TouchableOpacity,
+  Modal,
+  FlatList,
+  Pressable,
+  ImageBackground,
+  StatusBar,
+  TouchableWithoutFeedback,
+  Keyboard,
+} from "react-native";
