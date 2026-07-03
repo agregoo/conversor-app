@@ -108,7 +108,7 @@ const convertCurrency = async () => {
           {/* Cabeçalho */}
           <View className="mb-8 items-center">
             <Text className="text-white text-3xl font-black tracking-wider text-center">
-              GLOBAL CURRENCY
+              CONVERSOR
             </Text>
             <Text className="text-gray-400 text-sm font-medium mt-1 text-center">
               Conversões globais com dados em tempo real
