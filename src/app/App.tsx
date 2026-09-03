@@ -50,7 +50,7 @@ export default function App() {
     setModalVisible(false);
   };
 
-  const API_KEY = "b8837d7a4da5fe054456c914";
+  const API_KEY = process.env.API_KEY;
 
 const convertCurrency = async () => {
   setErrorText(null);
